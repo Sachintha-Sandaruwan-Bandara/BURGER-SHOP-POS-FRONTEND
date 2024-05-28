@@ -1,0 +1,108 @@
+/*** The new CSS Reset - version 1.2.0 (last updated 23.7.2021) ***/
+
+/* Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property */
+*:where(:not(iframe, canvas, img, svg, video):not(svg *)) {
+  all: unset;
+  display: revert;
+}
+
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+  Remove list styles (bullets/numbers)
+  in case you use it with normalize.css
+*/
+ol,
+ul {
+  list-style: none;
+}
+
+/* For images to not be able to exceed their container */
+img {
+  max-width: 100%;
+}
+
+/* Removes spacing between cells in tables */
+table {
+  border-collapse: collapse;
+}
+
+/* Revert the 'white-space' property for textarea elements on Safari */
+textarea {
+  white-space: revert;
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+.clearfix {
+  display: inline-block;
+}
+/* start commented backslash hack \*/
+* html .clearfix {
+  height: 1%;
+}
+.clearfix {
+  display: block;
+}
+/**/
+/* ==================================================================== */
+.home-page {
+  height: 100vh;
+  width: 100%;
+  background-color: #181714;
+  display: grid;
+  grid-template-columns: 1fr 10fr;
+}
+.navs {
+  color: #eb6968;
+  background-color: #1e1d2a;
+  display: flex;
+  flex-direction: column;
+  align-items: right;
+  gap: 30px;
+}
+.icons {
+  font-size: 40px;
+  padding: 30px;
+  width: 100%;
+  border-radius: 10px 0px 0px 10px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+.icons:hover {
+  background-color: #252937;
+  color: #000101;
+  border: none;
+}
+.icon {
+  padding: 10px;
+  border-radius: 10px;
+}
+.icon:hover {
+  border: 1px solid red;
+  color: white;
+  background-color: #eb6968;
+  box-shadow: 0 0 20px #eb6968;
+}
+/* ======================================================================================= */
+.box {
+  width: 100%;
+  height: 100%;
+  background-color: #1e1d2a;
+  display: grid;
+  grid-template-columns: 5fr 3fr;
+}
+.customer-list {
+  background-color: #252937;
+}
