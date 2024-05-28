@@ -56,7 +56,21 @@ textarea {
   display: block;
 }
 /**/
+/* ==============preloader ==========*/
+#preloader{
+    background: #1e1d2a url(/assets/fast\ food.gif) no-repeat center;
+    background-size: 20%;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+
+}
 /* ==================================================================== */
+.pages {
+  position: relative;
+}
+
 .home-page {
   height: 100vh;
   width: 100%;
@@ -95,14 +109,100 @@ textarea {
   background-color: #eb6968;
   box-shadow: 0 0 20px #eb6968;
 }
+
 /* ======================================================================================= */
-.box {
+
+.customer-page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
   width: 100%;
   height: 100%;
   background-color: #1e1d2a;
   display: grid;
-  grid-template-columns: 5fr 3fr;
+  grid-template-columns: 5fr 2fr;
 }
 .customer-list {
   background-color: #252937;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr ;
+  gap: 30px;
+  overflow-x: auto;
+  padding: 30px;
+}
+.customer-card{
+   height: 300px;
+   width: 250px;
+    background-color: #1e1d2a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 30px;
+}
+.customer-card img{
+    padding: 10px;
+    height: 150px;
+    width: 150px;
+    border: 1px solid #eb6968;
+    border-radius: 100%;
+    position: relative;
+    top: -40px;
+}
+
+.customer-card h1{
+    color: #E0E1E3;
+    font-weight: bolder;
+    font-size: 20px;
+}
+.customer-register form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  box-shadow: 0 0 10px black;
+  /* margin: 100px;
+  padding: 10px; */
+  gap: 10px;
+}
+.customer-register form h1 {
+  color: white;
+  font-weight: bolder;
+}
+.customer-register form input {
+  height: 50px;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px black;
+  color: white;
+}
+
+
+/* =======================item page======================= */
+.item-page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+
+  width: 100%;
+  height: 100%;
+  background-color: red;
+  display: grid;
+  grid-template-columns: 5fr 3fr;
+}
+
+/* ==================place order page===================== */
+.place-order-page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+
+  width: 100%;
+  height: 100%;
+  background-color: green;
+  display: grid;
+  grid-template-columns: 5fr 3fr;
 }
