@@ -59,7 +59,6 @@
                 <h1 >Galle</h1>
                 <h1 >2000$</h1>
               </div> -->
-             
             </div>
           </div>
           <div class="register">
@@ -84,11 +83,14 @@
               </div>
               <div class="input-wrapper">
                 <label for="">IMAGE</label>
-                <input id="customer-image" placeholder="id" type="text" />
+                <input id="customer-image" placeholder="id" type="file" />
               </div>
 
               <div class="btn-set">
-                <i id="customer-save" class="save fa-regular fa-floppy-disk"></i>
+                <i
+                  id="customer-save"
+                  class="save fa-regular fa-floppy-disk"
+                ></i>
                 <i id="" class="update fa-solid fa-pen-to-square"></i>
                 <i id="" class="delete fa-solid fa-trash-can"></i>
               </div>
@@ -98,7 +100,7 @@
         </div>
         <!-- =============================item page================================== -->
         <div id="item-page" class="item-page">
-           <div class="list">
+          <div class="list">
             <div class="search">
               <div class="header">
                 <h1>Item manage</h1>
@@ -112,15 +114,14 @@
               </div>
               <!-- <button>clear all</button> -->
             </div>
-            <div class="cards">
-              <div class="card">
+            <div id="item-cards" class="cards">
+              <!-- <div class="card">
                 <img src="/assets/burger.jpg" alt="" />
                 <h1>I001</h1>
                 <h1>Crispy Chiken Burger</h1>
                 <h1>4.90$</h1>
                 <h1>30pcs available</h1>
-              </div>
-             
+              </div> -->
             </div>
           </div>
           <div class="register">
@@ -129,29 +130,36 @@
               <div class="line"></div>
               <div class="input-wrapper">
                 <label for="">ITEM CODE</label>
-                <input placeholder="I001" type="text" />
+                <input id="item-code" placeholder="I001" type="text" />
               </div>
               <div class="input-wrapper">
                 <label for="">NAME</label>
-                <input placeholder="Crispy Chiken Burger" type="text" />
+                <input
+                  id="item-name"
+                  placeholder="Crispy Chiken Burger"
+                  type="text"
+                />
               </div>
               <div class="input-wrapper">
                 <label for="">QTY</label>
-                <input placeholder="30" type="text" />
+                <input id="item-qty" placeholder="30" type="text" />
               </div>
               <div class="input-wrapper">
                 <label for="">UNIT PRICE</label>
-                <input placeholder="4.90$" type="text" />
+                <input id="item-price" placeholder="4.90$" type="text" />
               </div>
               <div class="input-wrapper">
                 <label for="">IMAGE</label>
-                <input placeholder="id" type="file" />
+                <input id="item-image" placeholder="id" type="file" />
               </div>
 
               <div class="btn-set">
-                <i id="" class="save fa-regular fa-floppy-disk"></i>
-                <i id="" class="update fa-solid fa-pen-to-square"></i>
-                <i id="" class="delete fa-solid fa-trash-can"></i>
+                <i id="item-save" class="save fa-regular fa-floppy-disk"></i>
+                <i
+                  id="item-update"
+                  class="update fa-solid fa-pen-to-square"
+                ></i>
+                <i id="item-delete" class="delete fa-solid fa-trash-can"></i>
               </div>
               <div class="line"></div>
             </form>
@@ -160,7 +168,7 @@
 
         <!-- =================place order page -->
         <div id="place-order-page" class="place-order-page">
-                       <div class="list">
+          <div class="list">
             <div class="search">
               <div class="header">
                 <h1>Place Order</h1>
@@ -174,7 +182,7 @@
               </div>
               <!-- <button>clear all</button> -->
             </div>
-            <div class="cards">
+            <div id="place-order-cards" class="cards">
               <div class="card">
                 <img src="/assets/john-doe.jpg" alt="" />
                 <h1>C001</h1>
@@ -182,41 +190,30 @@
                 <h1>Galle</h1>
                 <h1>2000$</h1>
               </div>
-             
             </div>
           </div>
           <div class="register">
-            <form>
-              <h1>Customer Registration</h1>
-              <div class="line"></div>
-              <div class="input-wrapper">
-                <label for="">Customer ID</label>
-                <input placeholder="id" type="text" />
+            <div class="order-form">
+              <h1>Order Details</h1>
+              <div class="spacer"></div>
+              <div class="id-date">
+                <h1>Order ID</h1>
+                <h1>#001</h1>
               </div>
-              <div class="input-wrapper">
-                <label for="">NAME</label>
-                <input placeholder="id" type="text" />
+              <div class="id-date">
+                <h1>Date</h1>
+                <h1>Wednesday,10 March 2024</h1>
               </div>
-              <div class="input-wrapper">
-                <label for="">ADDRESS</label>
-                <input placeholder="id" type="text" />
+              <div class="spacer"></div>
+              <h1>Customer ID</h1>
+              <input type="text">
+              <div class="spacer"></div>
+              <div class="order-item-list">
+                <div class="order-item-card">
+                    
+                </div>
               </div>
-              <div class="input-wrapper">
-                <label for="">SALARY</label>
-                <input placeholder="id" type="text" />
-              </div>
-              <div class="input-wrapper">
-                <label for="">IMAGE</label>
-                <input placeholder="id" type="text" />
-              </div>
-
-              <div class="btn-set">
-                <i id="" class="save fa-regular fa-floppy-disk"></i>
-                <i id="" class="update fa-solid fa-pen-to-square"></i>
-                <i id="" class="delete fa-solid fa-trash-can"></i>
-              </div>
-              <div class="line"></div>
-            </form>
+            </div>
           </div>
         </div>
       </div>
@@ -224,5 +221,7 @@
 
     <script src="/js/controller/app.js"></script>
     <script type="module" src="/js/controller/customerController.js"></script>
+    <script type="module" src="/js/controller/itemController.js"></script>
+    <script type="module" src="/js/controller/placeOrderController.js"></script>
   </body>
 </html>
