@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Abel&family=Bebas+Neue&family=Charmonman:wght@400;700&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Lilita+One&family=Ms+Madi&family=Puritan:ital,wght@0,400;0,700;1,400;1,700&family=Rubik+Scribble&family=Ubuntu+Sans+Mono:ital,wght@0,400..700;1,400..700&display=swap");
+
 /*** The new CSS Reset - version 1.2.0 (last updated 23.7.2021) ***/
 
 /* Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property */
@@ -56,15 +58,41 @@ textarea {
   display: block;
 }
 /**/
-/* ==============preloader ==========*/
-#preloader{
-    background: #1e1d2a url(/assets/fast\ food.gif) no-repeat center;
-    background-size: 20%;
-    height: 100vh;
-    width: 100%;
-    position: fixed;
-    z-index: 100;
+body {
+  font-family: "Abel", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+/*============== scroll bar=============== */
 
+/* For the entire page */
+::-webkit-scrollbar {
+  width: 1px; /* Width of the scrollbar */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: black; /* Color of the track */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: gray; /* Color of the handle */
+  border-radius: 10px; /* Rounded corners for the handle */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Color of the handle when hovered */
+}
+/* ==============preloader ==========*/
+#preloader {
+  background: #1e1d2a url(/assets/fast\ food.gif) no-repeat center;
+  background-size: 20%;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
 }
 /* ==================================================================== */
 .pages {
@@ -99,11 +127,22 @@ textarea {
   color: #000101;
   border: none;
 }
+.ic {
+  background-color: #252937;
+  color: #000101;
+  border: none;
+}
 .icon {
   padding: 10px;
   border-radius: 10px;
 }
 .icon:hover {
+  border: 1px solid red;
+  color: white;
+  background-color: #eb6968;
+  box-shadow: 0 0 20px #eb6968;
+}
+.iconClick{
   border: 1px solid red;
   color: white;
   background-color: #eb6968;
@@ -125,35 +164,68 @@ textarea {
 }
 .customer-list {
   background-color: #252937;
+  display: flex;
+  flex-direction: column;
+  overflow-x: auto;
+}
+.search {
+  height: 100px;
+  border-bottom: 5px solid gray;
+  margin-left: 10px;
+  margin-right: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.search-container {
+  color: white;
+  border: 1px solid white;
+  height: 50px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+}
+.header h1 {
+  color: white;
+  font-size: 2em;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+.customer-cards {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr ;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 30px;
   overflow-x: auto;
   padding: 30px;
+  padding-top: 50px;
 }
-.customer-card{
-   height: 300px;
-   width: 250px;
-    background-color: #1e1d2a;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 30px;
+.customer-card {
+  height: 300px;
+  width: 250px;
+  background-color: #1e1d2a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 30px;
 }
-.customer-card img{
-    padding: 10px;
-    height: 150px;
-    width: 150px;
-    border: 1px solid #eb6968;
-    border-radius: 100%;
-    position: relative;
-    top: -40px;
+.customer-card img {
+  padding: 10px;
+  height: 150px;
+  width: 150px;
+  border: 1px solid #eb6968;
+  border-radius: 100%;
+  position: relative;
+  top: -40px;
 }
 
-.customer-card h1{
-    color: #E0E1E3;
-    font-weight: bolder;
-    font-size: 20px;
+.customer-card h1 {
+  color: #e0e1e3;
+  font-weight: bolder;
+  font-size: 20px;
+}
+.line {
+  border: 1px solid #343644;
+  width: 100%;
 }
 .customer-register form {
   display: flex;
@@ -161,23 +233,64 @@ textarea {
   align-items: center;
   justify-content: center;
   border-radius: 10px;
-  box-shadow: 0 0 10px black;
-  /* margin: 100px;
-  padding: 10px; */
+  padding: 20px;
+  margin-top: 40px;
+
   gap: 10px;
 }
 .customer-register form h1 {
   color: white;
   font-weight: bolder;
+  font-size: 30px;
+}
+.customer-register form label {
+  color: white;
+  font-weight: bolder;
+}
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 .customer-register form input {
-  height: 50px;
+  height: 60px;
+  width: 100%;
   padding: 10px;
   border-radius: 10px;
-  box-shadow: 0 0 10px black;
+  border: 1px solid #343644;
+  background-color: #252937;
   color: white;
 }
-
+.btn-set {
+  margin-top: 10px;
+  display: flex;
+  font-size: 30px;
+  justify-content: space-between;
+  width: 100%;
+}
+#save {
+  color: white;
+  padding: 10px 30px;
+  border: 1px solid;
+  border-radius: 10px;
+}
+#update {
+  color: white;
+  padding: 10px 30px;
+  border: 1px solid;
+  border-radius: 10px;
+}
+#delete {
+  color: #eb6968;
+  padding: 10px 30px;
+  border: 1px solid;
+  border-radius: 10px;
+}
+#delete:hover {
+  color: white;
+  background-color: #eb6968;
+  box-shadow: 0 0 20px #eb6968;
+}
 
 /* =======================item page======================= */
 .item-page {

@@ -18,87 +18,103 @@
     <div class="home-page">
       <div class="navs">
         <ul>
-          <li class="icons">
+          <li id="icon1" class="icons">
             <i id="customer" class="icon fa-solid fa-user"></i>
           </li>
-          <li class="icons">
+          <li id="icon2" class="icons">
             <i id="item" class="icon fa-solid fa-burger"></i>
           </li>
-          <li class="icons">
+          <li id="icon3" class="icons">
             <i id="place-order" class="icon fa-solid fa-cart-shopping"></i>
           </li>
         </ul>
       </div>
       <div class="pages">
         <!-- pages appear here -->
+
         <div id="customer-page" class="customer-page">
           <div class="customer-list">
-            <div class="customer-card">
-              <img src="/assets/john-doe.jpg" alt="" />
-              <h1>C001</h1>
-              <h1>john doe</h1>
-              <h1>Galle</h1>
-              <h1>2000$</h1>
+            <div class="search">
+              <div class="header">
+                <h1>customer manage</h1>
+              </div>
+              <div class="search-container">
+                <input placeholder="         SEARCH" type="text" />
+                <i
+                  class="fa-solid fa-magnifying-glass"
+                  style="color: #f5f5f5; padding: 5px"
+                ></i>
+              </div>
             </div>
-             <div class="customer-card">
-              <img src="/assets/john-doe.jpg" alt="" />
-              <h1>C001</h1>
-              <h1>john doe</h1>
-              <h1>Galle</h1>
-              <h1>2000$</h1>
-            </div>
-             <div class="customer-card">
-              <img src="/assets/john-doe.jpg" alt="" />
-              <h1>C001</h1>
-              <h1>john doe</h1>
-              <h1>Galle</h1>
-              <h1>2000$</h1>
-            </div>
-             <div class="customer-card">
-              <img src="/assets/john-doe.jpg" alt="" />
-              <h1>C001</h1>
-              <h1>john doe</h1>
-              <h1>Galle</h1>
-              <h1>2000$</h1>
-            </div>
-             <div class="customer-card">
-              <img src="/assets/john-doe.jpg" alt="" />
-              <h1>C001</h1>
-              <h1>john doe</h1>
-              <h1>Galle</h1>
-              <h1>2000$</h1>
-            </div>
-             <div class="customer-card">
-              <img src="/assets/john-doe.jpg" alt="" />
-              <h1>C001</h1>
-              <h1>john doe</h1>
-              <h1>Galle</h1>
-              <h1>2000$</h1>
-            </div>
-             <div class="customer-card">
-              <img src="/assets/john-doe.jpg" alt="" />
-              <h1>C001</h1>
-              <h1>john doe</h1>
-              <h1>Galle</h1>
-              <h1>2000$</h1>
-            </div>
-             <div class="customer-card">
-              <img src="/assets/john-doe.jpg" alt="" />
-              <h1>C001</h1>
-              <h1>john doe</h1>
-              <h1>Galle</h1>
-              <h1>2000$</h1>
+            <div class="customer-cards">
+              <div class="customer-card">
+                <img src="/assets/john-doe.jpg" alt="" />
+                <h1>C001</h1>
+                <h1>john doe</h1>
+                <h1>Galle</h1>
+                <h1>2000$</h1>
+              </div>
+              <div class="customer-card">
+                <img src="/assets/john-doe.jpg" alt="" />
+                <h1>C001</h1>
+                <h1>john doe</h1>
+                <h1>Galle</h1>
+                <h1>2000$</h1>
+              </div>
+              <div class="customer-card">
+                <img src="/assets/john-doe.jpg" alt="" />
+                <h1>C001</h1>
+                <h1>john doe</h1>
+                <h1>Galle</h1>
+                <h1>2000$</h1>
+              </div>
+              <div class="customer-card">
+                <img src="/assets/john-doe.jpg" alt="" />
+                <h1>C001</h1>
+                <h1>john doe</h1>
+                <h1>Galle</h1>
+                <h1>2000$</h1>
+              </div>
+              <div class="customer-card">
+                <img src="/assets/john-doe.jpg" alt="" />
+                <h1>C001</h1>
+                <h1>john doe</h1>
+                <h1>Galle</h1>
+                <h1>2000$</h1>
+              </div>
             </div>
           </div>
           <div class="customer-register">
             <form>
               <h1>Customer Registration</h1>
-              <input placeholder="id" type="text" />
-              <input placeholder="name" type="text" />
-              <input placeholder="address" type="text" />
-              <input placeholder="salary" type="text" />
-              <input type="file" />
-              <input type="submit" />
+            <div  class="line"></div>
+              <div class="input-wrapper">
+                <label for="">Customer ID</label>
+                <input placeholder="id" type="text" />
+              </div>
+              <div class="input-wrapper">
+                <label for="">NAME</label>
+                <input placeholder="id" type="text" />
+              </div>
+              <div class="input-wrapper">
+                <label for="">ADDRESS</label>
+                <input placeholder="id" type="text" />
+              </div>
+              <div class="input-wrapper">
+                <label for="">SALARY</label>
+                <input placeholder="id" type="text" />
+              </div>
+              <div class="input-wrapper">
+                <label for="">IMAGE</label>
+                <input placeholder="id" type="text" />
+              </div>
+
+              <div class="btn-set">
+                <i id="save" class="fa-regular fa-floppy-disk"></i>
+                <i id="update" class="fa-solid fa-pen-to-square"></i>
+                <i id="delete" class="fa-solid fa-trash-can"></i>
+              </div>
+              <div class="line"></div>
             </form>
           </div>
         </div>
