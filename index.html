@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Burger shop</title>
-    <link rel="stylesheet" href="/style.css" />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -12,6 +12,10 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="stylesheet" href="/css/app.css" />
+    <link rel="stylesheet" href="/css/customer.css" />
+    <link rel="stylesheet" href="/css/item.css" />
+    <link rel="stylesheet" href="/css/placeOrder.css" />
   </head>
   <body>
     <div id="preloader"></div>
@@ -33,7 +37,7 @@
         <!-- pages appear here -->
 
         <div id="customer-page" class="customer-page">
-          <div class="customer-list">
+          <div class="list">
             <div class="search">
               <div class="header">
                 <h1>customer manage</h1>
@@ -45,49 +49,146 @@
                   style="color: #f5f5f5; padding: 5px"
                 ></i>
               </div>
+              <!-- <button>clear all</button> -->
             </div>
-            <div class="customer-cards">
-              <div class="customer-card">
-                <img src="/assets/john-doe.jpg" alt="" />
-                <h1>C001</h1>
-                <h1>john doe</h1>
-                <h1>Galle</h1>
-                <h1>2000$</h1>
-              </div>
-              <div class="customer-card">
-                <img src="/assets/john-doe.jpg" alt="" />
-                <h1>C001</h1>
-                <h1>john doe</h1>
-                <h1>Galle</h1>
-                <h1>2000$</h1>
-              </div>
-              <div class="customer-card">
-                <img src="/assets/john-doe.jpg" alt="" />
-                <h1>C001</h1>
-                <h1>john doe</h1>
-                <h1>Galle</h1>
-                <h1>2000$</h1>
-              </div>
-              <div class="customer-card">
-                <img src="/assets/john-doe.jpg" alt="" />
-                <h1>C001</h1>
-                <h1>john doe</h1>
-                <h1>Galle</h1>
-                <h1>2000$</h1>
-              </div>
-              <div class="customer-card">
-                <img src="/assets/john-doe.jpg" alt="" />
-                <h1>C001</h1>
-                <h1>john doe</h1>
-                <h1>Galle</h1>
-                <h1>2000$</h1>
-              </div>
+            <div id="customer-cards" class="cards">
+              <!-- <div class="card">
+                <img  src="/assets/john-doe.jpg" alt="" />
+                <h1 >C001</h1>
+                <h1 >john doe</h1>
+                <h1 >Galle</h1>
+                <h1 >2000$</h1>
+              </div> -->
+             
             </div>
           </div>
-          <div class="customer-register">
+          <div class="register">
             <form>
               <h1>Customer Registration</h1>
-            <div  class="line"></div>
+              <div class="line"></div>
+              <div class="input-wrapper">
+                <label for="">Customer ID</label>
+                <input id="customer-id" id="" placeholder="id" type="text" />
+              </div>
+              <div class="input-wrapper">
+                <label for="">NAME</label>
+                <input id="customer-name" placeholder="id" type="text" />
+              </div>
+              <div class="input-wrapper">
+                <label for="">ADDRESS</label>
+                <input id="customer-address" placeholder="id" type="text" />
+              </div>
+              <div class="input-wrapper">
+                <label for="">SALARY</label>
+                <input id="customer-salary" placeholder="id" type="text" />
+              </div>
+              <div class="input-wrapper">
+                <label for="">IMAGE</label>
+                <input id="customer-image" placeholder="id" type="text" />
+              </div>
+
+              <div class="btn-set">
+                <i id="customer-save" class="save fa-regular fa-floppy-disk"></i>
+                <i id="" class="update fa-solid fa-pen-to-square"></i>
+                <i id="" class="delete fa-solid fa-trash-can"></i>
+              </div>
+              <div class="line"></div>
+            </form>
+          </div>
+        </div>
+        <!-- =============================item page================================== -->
+        <div id="item-page" class="item-page">
+           <div class="list">
+            <div class="search">
+              <div class="header">
+                <h1>Item manage</h1>
+              </div>
+              <div class="search-container">
+                <input placeholder="         SEARCH" type="text" />
+                <i
+                  class="fa-solid fa-magnifying-glass"
+                  style="color: #f5f5f5; padding: 5px"
+                ></i>
+              </div>
+              <!-- <button>clear all</button> -->
+            </div>
+            <div class="cards">
+              <div class="card">
+                <img src="/assets/burger.jpg" alt="" />
+                <h1>I001</h1>
+                <h1>Crispy Chiken Burger</h1>
+                <h1>4.90$</h1>
+                <h1>30pcs available</h1>
+              </div>
+             
+            </div>
+          </div>
+          <div class="register">
+            <form>
+              <h1>Add Items</h1>
+              <div class="line"></div>
+              <div class="input-wrapper">
+                <label for="">ITEM CODE</label>
+                <input placeholder="I001" type="text" />
+              </div>
+              <div class="input-wrapper">
+                <label for="">NAME</label>
+                <input placeholder="Crispy Chiken Burger" type="text" />
+              </div>
+              <div class="input-wrapper">
+                <label for="">QTY</label>
+                <input placeholder="30" type="text" />
+              </div>
+              <div class="input-wrapper">
+                <label for="">UNIT PRICE</label>
+                <input placeholder="4.90$" type="text" />
+              </div>
+              <div class="input-wrapper">
+                <label for="">IMAGE</label>
+                <input placeholder="id" type="file" />
+              </div>
+
+              <div class="btn-set">
+                <i id="" class="save fa-regular fa-floppy-disk"></i>
+                <i id="" class="update fa-solid fa-pen-to-square"></i>
+                <i id="" class="delete fa-solid fa-trash-can"></i>
+              </div>
+              <div class="line"></div>
+            </form>
+          </div>
+        </div>
+
+        <!-- =================place order page -->
+        <div id="place-order-page" class="place-order-page">
+                       <div class="list">
+            <div class="search">
+              <div class="header">
+                <h1>Place Order</h1>
+              </div>
+              <div class="search-container">
+                <input placeholder="         SEARCH" type="text" />
+                <i
+                  class="fa-solid fa-magnifying-glass"
+                  style="color: #f5f5f5; padding: 5px"
+                ></i>
+              </div>
+              <!-- <button>clear all</button> -->
+            </div>
+            <div class="cards">
+              <div class="card">
+                <img src="/assets/john-doe.jpg" alt="" />
+                <h1>C001</h1>
+                <h1>john doe</h1>
+                <h1>Galle</h1>
+                <h1>2000$</h1>
+              </div>
+             
+            </div>
+          </div>
+          <div class="register">
+            <form>
+              <h1>Customer Registration</h1>
+              <div class="line"></div>
               <div class="input-wrapper">
                 <label for="">Customer ID</label>
                 <input placeholder="id" type="text" />
@@ -110,20 +211,18 @@
               </div>
 
               <div class="btn-set">
-                <i id="save" class="fa-regular fa-floppy-disk"></i>
-                <i id="update" class="fa-solid fa-pen-to-square"></i>
-                <i id="delete" class="fa-solid fa-trash-can"></i>
+                <i id="" class="save fa-regular fa-floppy-disk"></i>
+                <i id="" class="update fa-solid fa-pen-to-square"></i>
+                <i id="" class="delete fa-solid fa-trash-can"></i>
               </div>
               <div class="line"></div>
             </form>
           </div>
         </div>
-
-        <div id="item-page" class="item-page"></div>
-        <div id="place-order-page" class="place-order-page"></div>
       </div>
     </div>
 
-    <script src="/main.js"></script>
+    <script src="/js/controller/app.js"></script>
+    <script type="module" src="/js/controller/customerController.js"></script>
   </body>
 </html>
