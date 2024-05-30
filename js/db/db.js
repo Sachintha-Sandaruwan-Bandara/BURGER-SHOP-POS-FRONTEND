@@ -52,4 +52,8 @@ var items = [
     image: "/assets/burger2.jpg",
   },
 ];
-export { customers,items };
+
+var orderList = [
+  
+];
+export { customers,items,orderList };
