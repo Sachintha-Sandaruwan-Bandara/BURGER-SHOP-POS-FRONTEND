@@ -38,15 +38,21 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log("Item added to cart:", itemCode);
     var selectedItem = items.find((item) => item.code === itemCode);
     if (selectedItem) {
-      var order = {
-        id:selectedItem.code,
-        name: selectedItem.name,
-        price: selectedItem.price,
-        qty: 1,
-      };
-      orderList.push(order);
-      console.log("Order List:", orderList);
+      var existingOrder = orderList.find((order) => order.id === itemCode);
+      if (existingOrder) {
+        existingOrder.qty += 1;
+      } else {
+        var order = {
+          id: selectedItem.code,
+          name: selectedItem.name,
+          price: selectedItem.price,
+          qty: 1,
+        };
+        orderList.push(order);
+      }
+      selectedItem.qty -= 1;
       updateOrderList();
+      updateItemList();
     }
   }
 
@@ -77,6 +83,7 @@ document.addEventListener("DOMContentLoaded", function () {
             `;
         cart.innerHTML += orderCard;
       });
+
       var deleteButtons = document.querySelectorAll(".trash");
       deleteButtons.forEach(function (button) {
         button.addEventListener("click", function () {
@@ -85,52 +92,56 @@ document.addEventListener("DOMContentLoaded", function () {
         });
       });
 
-            var minusButtons = document.querySelectorAll(".minus");
-            minusButtons.forEach(function (button) {
-              button.addEventListener("click", function () {
+      var minusButtons = document.querySelectorAll(".minus");
+      minusButtons.forEach(function (button) {
+        button.addEventListener("click", function () {
+          var orderId = button.id;
+          var order = orderList.find((order) => order.id === orderId);
+          if (order && order.qty > 0) {
+            order.qty -= 1;
+            if (order.qty === 0) {
               
-                orderList.forEach(function (order) {
-                  if (button.id === order.id) {
-                    if (order.qty != 0) {
-                      order.qty -= 1;
-                      updateOrderList();
-                    }
-                   
-                  }
-                })
+              deleteItemFromOrder(order.name);
+            } else {
+              var item = items.find((item) => item.code === orderId);
+              if (item) {
+                item.qty += 1;
+              }
+              updateOrderList();
+              updateItemList();
+            }
+          }
+        });
+      });
 
-              });
-            });
-      
-                  var plusButtons = document.querySelectorAll(".plus");
-                  plusButtons.forEach(function (button) {
-                    button.addEventListener("click", function () {
-                      
-                      orderList.forEach(function (order) {
-                        if (button.id === order.id) {
-                          itemList.forEach(function () {
-                            
-                          })
-
-                            order.qty += 1;
-                            updateOrderList();
-                          
-                        }
-                      });
-                    });
-                  });
+      var plusButtons = document.querySelectorAll(".plus");
+      plusButtons.forEach(function (button) {
+        button.addEventListener("click", function () {
+          var orderId = button.id;
+          var order = orderList.find((order) => order.id === orderId);
+          var item = items.find((item) => item.code === orderId);
+          if (order && item && item.qty > 0) {
+            order.qty += 1;
+            item.qty -= 1;
+            updateOrderList();
+            updateItemList();
+          }
+        });
+      });
     }
   }
 
   function deleteItemFromOrder(itemName) {
     var index = orderList.findIndex((order) => order.name === itemName);
     if (index !== -1) {
-   
+      var order = orderList[index];
+      var item = items.find((item) => item.code === order.id);
+      if (item) {
+        item.qty += order.qty;
+      }
       orderList.splice(index, 1);
       updateOrderList();
+      updateItemList();
     }
   }
-
-
-
 });
