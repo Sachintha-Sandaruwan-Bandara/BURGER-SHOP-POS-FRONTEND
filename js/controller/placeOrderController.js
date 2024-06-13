@@ -97,10 +97,14 @@ document.addEventListener("DOMContentLoaded", function () {
         button.addEventListener("click", function () {
           var orderId = button.id;
           var order = orderList.find((order) => order.id === orderId);
+          var Item = items.find((item) => item.code === orderId);
+
           if (order && order.qty > 0) {
             order.qty -= 1;
             if (order.qty === 0) {
               
+              var selectedItem = items.find((item) => item.code === orderId);
+              selectedItem.qty += 1;
               deleteItemFromOrder(order.name);
             } else {
               var item = items.find((item) => item.code === orderId);
@@ -120,7 +124,7 @@ document.addEventListener("DOMContentLoaded", function () {
           var orderId = button.id;
           var order = orderList.find((order) => order.id === orderId);
           var item = items.find((item) => item.code === orderId);
-          if (order && item && item.qty > 0) {
+          if (order && item && item.qty > 0 &&item.qty!=0) {
             order.qty += 1;
             item.qty -= 1;
             updateOrderList();

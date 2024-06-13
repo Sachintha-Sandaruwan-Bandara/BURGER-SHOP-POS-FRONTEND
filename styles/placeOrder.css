@@ -4,7 +4,7 @@
   left: 0;
   z-index: 10;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background-color: #1e1d2a;
   display: grid;
   grid-template-columns: 5fr 2fr;
@@ -38,7 +38,7 @@ border-radius: 10px 10px 0px 0px;
   background-color: #252937;
 }
 .order-item-list{
-  height: 400px;
+  height: 300px;
   overflow-x:auto;
   display: flex;
   flex-direction: column;
@@ -122,3 +122,23 @@ color: white;
   background-color: #eb6968;
   box-shadow: 0 0 20px #eb6968;
 }
+
+
+
+
+/* Media Queries */
+
+@media only screen and (max-width: 1372px) {
+.place-order-page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  background-color: #1e1d2a;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+}
+}
+

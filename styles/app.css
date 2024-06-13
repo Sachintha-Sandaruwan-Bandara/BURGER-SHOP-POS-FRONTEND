@@ -97,6 +97,7 @@ body {
 /* ==================================================================== */
 .pages {
   position: relative;
+  overflow-y:hidden;
 }
 
 .home-page {
@@ -283,3 +284,32 @@ body {
 }
 
 
+
+
+
+@media only screen and (max-width: 1372px) {
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  overflow-x: auto;
+  padding: 30px;
+  padding-top: 50px;
+}
+}
+
+@media only screen and (max-width: 1114px) {
+.cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  overflow-x: auto;
+  padding: 30px;
+  padding-top: 50px;
+}
+}
+
+@media only screen and (max-width: 728px) {
+
+}
