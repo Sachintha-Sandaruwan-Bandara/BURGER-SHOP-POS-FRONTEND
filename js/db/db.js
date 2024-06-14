@@ -37,20 +37,7 @@ var items = [
     price: "10$",
     image: "assets/burger2.jpg",
   },
-  {
-    code: "I001",
-    name: "Crispy Chiken Burger",
-    qty: "30",
-    price: "4.50$",
-    image: "assets/burger.jpg",
-  },
-  {
-    code: "I002",
-    name: "Cheesy Beef Burger",
-    qty: "23",
-    price: "10$",
-    image: "assets/burger2.jpg",
-  },
+  
 ];
 
 var orderList = [

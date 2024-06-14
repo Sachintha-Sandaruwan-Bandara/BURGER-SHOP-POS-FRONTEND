@@ -1,6 +1,6 @@
 import { items, orderList } from "../db/db.js";
 
-document.addEventListener("DOMContentLoaded", function () {
+// document.addEventListener("DOMContentLoaded", function () {
   var itemList = document.getElementById("place-order-cards");
 
   updateItemList();
@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function addToCart(itemCode) {
     console.log("Item added to cart:", itemCode);
     var selectedItem = items.find((item) => item.code === itemCode);
-    if (selectedItem) {
+    if (selectedItem.qty!==0) {
       var existingOrder = orderList.find((order) => order.id === itemCode);
       if (existingOrder) {
         existingOrder.qty += 1;
@@ -147,5 +147,10 @@ document.addEventListener("DOMContentLoaded", function () {
       updateOrderList();
       updateItemList();
     }
-  }
-});
+}
+  
+
+export function updateItemListInPlaceOrder(params) {
+  updateItemList();
+}
+// });
