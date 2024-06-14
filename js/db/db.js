@@ -27,20 +27,19 @@ var items = [
     code: "I001",
     name: "Crispy Chiken Burger",
     qty: "30",
-    price: "4.50$",
+    price: "4.50",
     image: "assets/burger.jpg",
   },
   {
     code: "I002",
     name: "Cheesy Beef Burger",
     qty: "23",
-    price: "10$",
+    price: "10",
     image: "assets/burger2.jpg",
   },
-  
 ];
 
-var orderList = [
-  
-];
-export { customers,items,orderList };
+var orderList = [];
+
+var purchaseOrderList = [];
+export { customers, items, orderList, purchaseOrderList };

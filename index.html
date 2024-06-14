@@ -43,8 +43,13 @@
                 <h1>customer manage</h1>
               </div>
               <div class="search-container">
-                <input id="txt-customer-search" placeholder="         SEARCH" type="text" />
-                <i id="btn-customer-search"
+                <input
+                  id="txt-customer-search"
+                  placeholder="         SEARCH"
+                  type="text"
+                />
+                <i
+                  id="btn-customer-search"
                   class="fa-solid fa-magnifying-glass"
                   style="color: #f5f5f5; padding: 5px"
                 ></i>
@@ -67,7 +72,13 @@
               <div class="line"></div>
               <div class="input-wrapper">
                 <label for="">Customer ID</label>
-                <input id="customer-id" id="" placeholder="id" type="text"  readonly />
+                <input
+                  id="customer-id"
+                  id=""
+                  placeholder="id"
+                  type="text"
+                  readonly
+                />
               </div>
               <div class="input-wrapper">
                 <label for="">NAME</label>
@@ -91,8 +102,14 @@
                   id="customer-save"
                   class="save fa-regular fa-floppy-disk"
                 ></i>
-                <i id="customer-update" class="update fa-solid fa-pen-to-square"></i>
-                <i id="customer-delete" class="delete fa-solid fa-trash-can"></i>
+                <i
+                  id="customer-update"
+                  class="update fa-solid fa-pen-to-square"
+                ></i>
+                <i
+                  id="customer-delete"
+                  class="delete fa-solid fa-trash-can"
+                ></i>
               </div>
               <div class="line"></div>
             </form>
@@ -106,8 +123,13 @@
                 <h1>Item manage</h1>
               </div>
               <div class="search-container">
-                <input id="txt-item-search" placeholder="         SEARCH" type="text" />
-                <i id="btn-item-search"
+                <input
+                  id="txt-item-search"
+                  placeholder="         SEARCH"
+                  type="text"
+                />
+                <i
+                  id="btn-item-search"
                   class="fa-solid fa-magnifying-glass"
                   style="color: #f5f5f5; padding: 5px"
                 ></i>
@@ -130,7 +152,7 @@
               <div class="line"></div>
               <div class="input-wrapper">
                 <label for="">ITEM CODE</label>
-                <input id="item-code" placeholder="I001" type="text" readonly/>
+                <input id="item-code" placeholder="I001" type="text" readonly />
               </div>
               <div class="input-wrapper">
                 <label for="">NAME</label>
@@ -198,15 +220,15 @@
               <div class="spacer"></div>
               <div class="id-date">
                 <h1>Order ID</h1>
-                <h1>#001</h1>
+                <h1 id="order-id">0000</h1>
               </div>
               <div class="id-date">
                 <h1>Date</h1>
-                <h1>Wednesday,10 March 2024</h1>
+                <h1 id="date">Wednesday,10 March 2024</h1>
               </div>
               <div class="spacer"></div>
               <h1>Customer ID</h1>
-              <input type="text" />
+              <input id="customer-id-field" type="text" />
               <div class="spacer"></div>
               <div id="order-item-list" class="order-item-list">
                 <!-- <div class="order-item-card">
@@ -226,15 +248,22 @@
                 </div> -->
               </div>
               <div class="payment">
-                <div class="discount">
-                  <h1>Discount:</h1>
-                  <input type="text" />
-                </div>
                 <div class="total">
                   <h1>Sub Total:</h1>
-                  <h1>45$</h1>
+                  
+                  <h1 id="sub-total">0.00</h1>
                 </div>
-                <button>Continue to Payment</button>
+                <div class="discount">
+                  <h1>Discount:</h1>
+                  <input id="txt-discount" type="text"  placeholder="10%"/>
+                </div>
+
+                <div class="total">
+                  <h1>Total:</h1>
+                  
+                  <h1 id="total">0.00</h1>
+                </div>
+                <button id="btn-pay">Continue to Payment</button>
               </div>
             </div>
           </div>
